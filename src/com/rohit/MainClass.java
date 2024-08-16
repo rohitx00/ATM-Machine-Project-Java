@@ -1,35 +1,37 @@
-package com.sjprogramming;
+package com.rohit;
 
 import java.util.Scanner;
 
 public class MainClass {
     public static void main(String[] args) {
         AtmOperationInterf op=new AtmOperationImpl();
-        int atmnumber=12345;
-        int atmpin=123;
+        int atmnumber=123456;
+        int atmpin=2244;
         Scanner in=new Scanner(System.in);
-        System.out.println("Welcome to ATM Machine !!!");
+        System.out.println("Welcome to ATM Machine !!! \n");
         System.out.print("Enter Atm Number : ");
         int atmNumber=in.nextInt();
         System.out.print("Enter Pin: ");
         int pin=in.nextInt();
+        System.err.println();
         if((atmnumber==atmNumber)&&(atmpin==pin)){
             while(true){
-                System.out.println("1.View Available Balance\n2.Withdraw Amount\n3.Deposit Amount\n4.View Ministatement\n5.Exit");
-                System.out.println("Enter Choice : ");
+                System.out.println("1.View Available Balance\n2.Withdraw Amount\n3.Deposit Amount\n4.View Ministatement\n5.Exit \n");
+                System.out.print("Enter Choice : ");
                 int ch=in.nextInt();
+                System.err.println();
                 if(ch==1){
                     op.viewBalance();
 
                 }
                 else if(ch==2){
-                    System.out.println("Enter amount to withdraw ");
+                    System.out.print("Enter amount to withdraw : ");
                     double withdrawAmount=in.nextDouble();
                     op.withdrawAmount(withdrawAmount);
 
                 }
                 else if(ch==3){
-                    System.out.println("Enter Amount to Deposit :");
+                    System.out.print("Enter Amount to Deposit : ");
                     double depositAmount=in.nextDouble();//5000
                     op.depositAmount(depositAmount);
 
@@ -40,7 +42,7 @@ public class MainClass {
 
                 }
                 else if(ch==5){
-                    System.out.println("Collect your ATM Card\n Thank you for using ATM Machine!!");
+                    System.out.println("Collect your ATM Card\n Thank you for using ATM Machine!! \n");
                     System.exit(0);
                 }
                 else

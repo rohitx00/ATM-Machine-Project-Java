@@ -1,4 +1,4 @@
-package com.sjprogramming;
+package com.rohit;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,7 @@ public class AtmOperationImpl implements AtmOperationInterf{
     Map<Double,String> ministmt=new HashMap<>();
     @Override
     public void viewBalance() {
-        System.out.println("Available Balance is : "+atm.getBalance());
+        System.out.println("Available Balance is : "+atm.getBalance() + "\n");
 
     }
 
@@ -21,19 +21,19 @@ public class AtmOperationImpl implements AtmOperationInterf{
                 atm.setBalance(atm.getBalance() - withdrawAmount);
                 viewBalance();
             } else {
-                System.out.println("Insufficient Balance !!");
+                System.out.println("Insufficient Balance !! \n");
             }
         }
         else {
-            System.out.println("Please enter the amount in multipal of 500");
+            System.out.println("Please enter the amount in multipal of 500 \n");
         }
 
     }
 
     @Override
     public void depositAmount(double depositAmount) {
-        ministmt.put(depositAmount," Amount Deposited");
-        System.out.println(depositAmount+" Deposited Successfully !!");
+        ministmt.put(depositAmount," Amount Deposited \n");
+        System.out.println(depositAmount+" Deposited Successfully !! \n");
         atm.setBalance(atm.getBalance()+depositAmount);
         viewBalance();
 
