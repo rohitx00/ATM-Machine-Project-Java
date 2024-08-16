@@ -5,7 +5,7 @@ public class ATM {
     private double depositAmount;
     private double withdrawAmount;
 
-    //default constructor
+    //default constructorre
     public ATM(){
 
     }
